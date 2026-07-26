@@ -91,7 +91,7 @@ Uber-Fare-Prediction/
 1. Clone this repository.
 
 ```bash
-git clone https://github.com/your-username/Uber-Fare-Prediction.git
+git clone https://github.com/harsh8767/Uber-Fare-Prediction.git
 ```
 
 2. Install the required libraries.
