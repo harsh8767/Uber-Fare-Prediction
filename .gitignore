@@ -1,22 +1,36 @@
-# Jupyter Notebook
-.ipynb_checkpoints/
-
 # Python
 __pycache__/
 *.py[cod]
+*.pyo
 
 # Virtual Environments
 venv/
-env/
 .venv/
+env/
 
-# Environment Variables
-.env
+# Jupyter
+.ipynb_checkpoints/
 
-# IDE Files
+# Streamlit
+.streamlit/
+
+# VS Code
 .vscode/
-.idea/
 
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Environment Variables
+.env
+
+# Python Cache
+.pytest_cache/
+
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
