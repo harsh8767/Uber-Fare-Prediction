@@ -1,0 +1,486 @@
+/* ==========================================================
+   Global Styles
+========================================================== */
+
+html,
+body,
+[class*="css"] {
+
+    font-family: "Segoe UI", sans-serif;
+}
+
+.main {
+
+    background: #0E1117;
+    color: #FFFFFF;
+}
+
+
+/* Hide Streamlit Branding */
+
+#MainMenu {
+
+    visibility: hidden;
+}
+
+footer {
+
+    visibility: hidden;
+}
+
+header {
+
+    visibility: hidden;
+}
+
+
+/* ==========================================================
+   Main Container
+========================================================== */
+
+.block-container {
+
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 1400px;
+}
+
+
+/* ==========================================================
+   Hero Section
+========================================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding: 25px 20px 40px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 12px;
+}
+
+.hero p {
+
+    font-size: 19px;
+
+    color: #B7BDC7;
+
+    max-width: 760px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   Section Headings
+========================================================== */
+
+h2,
+h3 {
+
+    color: white;
+}
+
+
+/* ==========================================================
+   Streamlit Containers
+========================================================== */
+
+div[data-testid="stVerticalBlock"] {
+
+    border-radius: 16px;
+}
+
+
+/* ==========================================================
+   Text Inputs
+========================================================== */
+
+.stTextInput input {
+
+    border-radius: 12px;
+
+    border: 1px solid #30363D;
+
+    background: #161B22;
+
+    color: white;
+
+    padding: 12px;
+
+    transition: 0.25s;
+}
+
+.stTextInput input:focus {
+
+    border: 1px solid #06C167;
+
+    box-shadow: 0 0 8px rgba(6,193,103,.35);
+}
+
+
+/* ==========================================================
+   Number Input
+========================================================== */
+
+.stNumberInput input {
+
+    border-radius: 12px;
+
+    background: #161B22;
+
+    color: white;
+
+    border: 1px solid #30363D;
+}
+
+
+/* ==========================================================
+   Date & Time Inputs
+========================================================== */
+
+.stDateInput,
+.stTimeInput {
+
+    border-radius: 12px;
+}
+
+
+/* ==========================================================
+   Buttons
+========================================================== */
+
+.stButton>button {
+
+    width: 100%;
+
+    height: 52px;
+
+    background: linear-gradient(
+        90deg,
+        #06C167,
+        #04A85A
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    border: none;
+
+    border-radius: 12px;
+
+    transition: all .25s ease;
+}
+
+.stButton>button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 20px rgba(6,193,103,.30);
+}
+
+
+/* ==========================================================
+   Horizontal Divider
+========================================================== */
+
+hr {
+
+    border-color: #2D333B;
+}
+
+/* ==========================================================
+   Metric Cards
+========================================================== */
+
+.metric-card {
+
+    background: #161B22;
+
+    border: 1px solid #2D333B;
+
+    border-radius: 18px;
+
+    padding: 28px 20px;
+
+    text-align: center;
+
+    transition: all .30s ease;
+
+    margin-bottom: 15px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+}
+
+.metric-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #06C167;
+
+    box-shadow: 0 12px 28px rgba(6,193,103,.20);
+}
+
+.metric-card h3 {
+
+    color: #8B949E;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.metric-card h1 {
+
+    color: white;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    margin: 0;
+}
+
+
+/* ==========================================================
+   Trip Summary Cards
+========================================================== */
+
+.summary {
+
+    background: #161B22;
+
+    border: 1px solid #2D333B;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+    transition: .25s;
+}
+
+.summary:hover {
+
+    border-color: #06C167;
+
+    box-shadow: 0 8px 20px rgba(6,193,103,.15);
+}
+
+.summary strong {
+
+    color: white;
+}
+
+
+/* ==========================================================
+   Prediction History Cards
+========================================================== */
+
+.history-card {
+
+    background: #161B22;
+
+    border: 1px solid #2D333B;
+
+    border-left: 5px solid #06C167;
+
+    border-radius: 16px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 15px;
+
+    transition: .25s;
+}
+
+.history-card:hover {
+
+    transform: translateX(4px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+
+/* ==========================================================
+   Expanders
+========================================================== */
+
+.streamlit-expanderHeader {
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+.stCaption {
+
+    text-align: center;
+
+    color: #8B949E;
+
+    font-size: 14px;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================================
+   Map Styling
+========================================================== */
+
+iframe {
+
+    border-radius: 18px !important;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+
+/* ==========================================================
+   Smooth Fade Animation
+========================================================== */
+
+.hero,
+.metric-card,
+.summary,
+.history-card {
+
+    animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   Custom Scrollbar
+========================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0E1117;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #2D333B;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #06C167;
+}
+
+
+/* ==========================================================
+   Streamlit Success Message
+========================================================== */
+
+div[data-testid="stAlert"] {
+
+    border-radius: 14px;
+
+    border: none;
+}
+
+
+/* ==========================================================
+   Metric Alignment
+========================================================== */
+
+.metric-card h1 {
+
+    letter-spacing: .5px;
+}
+
+.metric-card h3 {
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================
+   Responsive Design
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+
+        font-size: 36px;
+    }
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+    .metric-card h1 {
+
+        font-size: 28px;
+    }
+
+    .summary {
+
+        padding: 18px;
+    }
+
+    .block-container {
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+    }
+}
