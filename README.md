@@ -1,117 +1,231 @@
-# 🚖 Uber Fare Prediction using Machine Learning
+# 🚖 Uber Fare Prediction
 
-## 📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-This project predicts the fare of an Uber ride based on trip details such as pickup location, drop-off location, passenger count, date, and time. Two machine learning algorithms—**Linear Regression** and **Random Forest Regression**—are implemented and compared to determine the best-performing model.
-
----
-
-## 🎯 Objective
-
-The main objectives of this project are to:
-
-- Preprocess the Uber Fare dataset.
-- Detect and remove outliers.
-- Perform correlation analysis.
-- Train Linear Regression and Random Forest Regression models.
-- Evaluate and compare model performance using R² Score, RMSE, and MAE.
+Estimate Uber taxi fares using **Machine Learning**, **Geospatial Analytics**, and an **Interactive Streamlit Dashboard**.
 
 ---
 
-## 📂 Dataset
+## 🌐 Live Demo
 
-- **Dataset:** Uber Fares Dataset
-- **Source:** https://www.kaggle.com/datasets/yasserh/uber-fares-dataset
+👉 **Try the application here:**  
+**https://uber-fare-prediction-b75r.onrender.com/**
+
+> Replace the above URL with your Render deployment link after deployment.
 
 ---
 
-## 🛠️ Technologies Used
+## 📸 Preview
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
+### 🏠 Home Page
+
+![Home](images/home.png)
+
+### 🗺️ Route Preview & Fare Prediction
+
+![Prediction](images/prediction.png)
+
+### 📊 Trip History
+
+![History](images/history.png)
+
+---
+
+## 📖 Project Overview
+
+Uber fare estimation depends on multiple factors such as:
+
+- Pickup & Dropoff locations
+- Travel distance
+- Pickup date & time
+- Passenger count
+
+This project predicts taxi fares using a **Random Forest Regressor** trained on historical Uber trip data. The application provides an intuitive interface where users can enter trip details, visualize the route on a map, and instantly receive a fare estimate.
+
+---
+
+## ✨ Features
+
+- 🚖 Predict Uber fare in real time
+- 📍 Address-to-coordinate geocoding
+- 🗺️ Interactive route visualization using Folium
+- 📏 Automatic distance calculation (Haversine Formula)
+- ⏱️ Estimated travel time
+- 👥 Passenger count selection
+- 📅 Pickup date & time selection
+- 📜 Recent prediction history
+- 🌙 Modern responsive dark-themed UI
+
+---
+
+## 🛠️ Tech Stack
+
+### Machine Learning
 - Scikit-learn
-- Jupyter Notebook
+- Random Forest Regressor
+- Joblib
+
+### Data Processing
+- Pandas
+- NumPy
+
+### Web Application
+- Streamlit
+- Streamlit-Folium
+
+### Mapping & Geospatial
+- Folium
+- Geopy
+- OpenStreetMap (Nominatim)
 
 ---
 
-## 📋 Project Workflow
+## 📂 Project Structure
 
-1. Import Libraries
-2. Load Dataset & Exploratory Data Analysis (EDA)
-3. Data Preprocessing
-4. Feature Engineering (Haversine Distance)
-5. Outlier Detection using IQR
-6. Correlation Analysis
-7. Train-Test Split
-8. Linear Regression
-9. Random Forest Regression
-10. Model Evaluation & Comparison
-
----
-
-## 📊 Evaluation Metrics
-
-The models are evaluated using:
-
-- **R² Score**
-- **RMSE (Root Mean Squared Error)**
-- **MAE (Mean Absolute Error)**
-
----
-
-## 📈 Results
-
-Both models were trained and evaluated on the processed dataset.
-
-The comparison showed that **Random Forest Regression** outperformed **Linear Regression**, achieving a higher R² Score and lower RMSE and MAE, making it the better model for predicting Uber fares.
-
----
-
-## 📁 Project Structure
-
-```
+```text
 Uber-Fare-Prediction/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── assets/
+│   └── styles.css
 │
 ├── data/
 │   └── uber.csv
 │
-├── Uber_Fare_Prediction.ipynb
-├── README.md
-├── requirements.txt
-└── .gitignore
+├── images/
+│   ├── home.png
+│   ├── prediction.png
+│   └── history.png
+│
+├── models/
+│   ├── random_forest_model.pkl
+│   └── model_features.pkl
+│
+├── notebook/
+│   └── Uber_Fare_Prediction.ipynb
+│
+└── utils/
+    ├── predictor.py
+    ├── geocoder.py
+    └── distance.py
 ```
 
 ---
 
-## ▶️ How to Run
+## ⚙️ Installation
 
-1. Clone this repository.
+Clone the repository:
 
 ```bash
 git clone https://github.com/harsh8767/Uber-Fare-Prediction.git
 ```
 
-2. Install the required libraries.
+Move into the project directory:
+
+```bash
+cd Uber-Fare-Prediction
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the Jupyter Notebook.
+---
+
+## ▶️ Run Locally
+
+Start the Streamlit application:
 
 ```bash
-jupyter notebook
+streamlit run app.py
 ```
 
-4. Run all cells in **Uber_Fare_Prediction.ipynb**.
+The application will open in your browser.
+
+---
+
+## 🤖 Machine Learning Model
+
+### Model Used
+
+- Random Forest Regressor
+
+### Features Used
+
+- Pickup Latitude
+- Pickup Longitude
+- Dropoff Latitude
+- Dropoff Longitude
+- Passenger Count
+- Year
+- Month
+- Day
+- Hour
+- Day of Week
+- Distance (Haversine)
+
+---
+
+## 📈 Model Performance
+
+| Metric | Score |
+|---------|--------:|
+| **R² Score** | **0.7824** |
+| **RMSE** | **1.9394** |
+| **MAE** | **1.3350** |
+
+---
+
+## 🌍 Deployment
+
+The application is deployed using **Render**.
+
+To deploy:
+
+1. Push the project to GitHub.
+2. Create a new Render Web Service.
+3. Set the build command:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Set the start command:
+
+```bash
+streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+```
+
+---
+
+## 🔮 Future Improvements
+
+- Live traffic estimation
+- Surge pricing prediction
+- Weather-based fare adjustment
+- Support for multiple cities
+- Deep Learning models
+- Ride category selection (UberX, UberXL, Black, etc.)
+- Fare confidence intervals
 
 ---
 
 ## 👨‍💻 Author
 
-**Harsh Gopinath Chavan**
+**Harsh Chavan**
 
 GitHub: https://github.com/harsh8767
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub!
