@@ -14,7 +14,6 @@ Estimate Uber taxi fares using **Machine Learning**, **Geospatial Analytics**, a
 👉 **Try the application here:**  
 **https://uber-fare-prediction-b75r.onrender.com/**
 
-> Replace the above URL with your Render deployment link after deployment.
 
 ---
 
