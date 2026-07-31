@@ -2,18 +2,21 @@
 Prediction utilities for Uber Fare Prediction.
 """
 
+from pathlib import Path
 import joblib
 import pandas as pd
 
 from utils.distance import haversine_distance
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load trained model
-model = joblib.load("models/random_forest_model.pkl")
+model = joblib.load(
+    BASE_DIR / "models" / "random_forest_model.pkl"
+)
 
-# Load feature order
-model_features = joblib.load("models/model_features.pkl")
-
+model_features = joblib.load(
+    BASE_DIR / "models" / "model_features.pkl"
+)
 
 def prepare_features(
     pickup_lat,
